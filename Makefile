@@ -9,4 +9,4 @@ clean:
 	@rm -f matmul make.out
 
 submit:
-	zip CSE120_HW5_Solution.zip Makefile matmul.c README.txt
+	zip -r CSE120_HW5_Solution.zip Makefile matmul.c README.txt

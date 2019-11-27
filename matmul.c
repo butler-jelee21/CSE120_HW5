@@ -156,6 +156,8 @@ int main(int argc, char **argv)
 	printf("\n#### Testing Correctness of Tiling Algorithm #### \n");
 	printf("Correctness of Tiling Algorithm (if not 0 then incorrect): %d \n", verify(C, D));
 
+	// Reset C Matrix
+	memset((__uint64_t**)C, 0, sizeof(__uint64_t) * SIZE * SIZE);
 
 	printf("\n#### Testing Matmul (isTranspose = True) #### \n");
 	transpose();
@@ -175,6 +177,9 @@ int main(int argc, char **argv)
 		printf("Transpose Tile Matmul for %d took %f seconds to execute \n", i, time_taken);
 		i = i << 1;
 	}
-	
+
+	printf("\n#### Testing Correctness of Tiling Algorithm #### \n");
+	printf("Correctness of Tiling Algorithm (if not 0 then incorrect): %d \n", verify(C, D));
+
 	printf("\n#### Testing Complete #### \n");
 }
